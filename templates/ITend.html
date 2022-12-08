@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="shsa384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+    <title>Information Technology Prediction Result</title>
+</head>
+<body>
+    <main>
+        <div class="header">
+            <div><img style="width: 100px; height: auto; z-index: 1" src="https://i.ibb.co/hVNnnCf/312968052-2476337182505210-5876316929227327673-n.png" alt="312968052-2476337182505210-5876316929227327673-n" border="0"></div>
+            <div class="logo">
+                <h3>Information Technology Prediction Result</h3>
+            </div>
+            <div class="nav">
+                <h3 href="/" style="cursor: pointer; color: white"><i class="fas fa-home"></i> HOME</h3>
+            </div>
+        </div>
+
+        <!-- HERO SECTION -->
+        <hr>
+        <div class="hero">
+            <div class="right">
+                <p class="title">Based on our system calculations</p>
+                <p class="prediction_label1" style="color: grey; font-weight: bold; font-size: x-large;">{{ prediction_label1 }}</p>
+                <p class="prediction_label2" style="color: grey; font-weight: bold; font-size: x-large;">{{ prediction_label2 }}</p> 
+                <p class="prediction_label3" style="color: grey; font-weight: bold; font-size: x-large;">{{ prediction_label3 }}</p>
+                <p class="prediction_label4" style="color: grey; font-weight: bold; font-size: x-large;">{{ prediction_label4 }}</p>
+                <p class="prediction_label5" style="color: grey; font-weight: bold; font-size: x-large;">{{ prediction_label5 }}</p>
+              <hr>
+                <p class="label_text1" style="color: grey; font-weight: bold; font-size: x-large;">{{ label_text1 }}</p>
+                <p class="label_text2" style="color: grey; font-weight: bold; font-size: x-large;">{{ label_text2 }}</p>
+                <div class="anchorCon">
+                  <a href="/predictIT" style="border-color: black;"><h4 class="itDep">Predict Again</h4></a>
+                </div>
+            </div>
+            <div class="left">
+                <div class="center-div">
+                  <hr>
+                  <center><p class="job_label2">{{ job_label2 }}</p></center>
+                  <center><p class="job_label1">{{ job_label1 }}</p></center>
+                  <hr>
+
+                  <center><p id="prediction_text2" class="pred_label1">{{ prediction_text2 }}</p></center>
+                  <center><p id="prediction_text3" class="pred_label1">{{ prediction_text3 }}</p></center>
+                  <center><p id="prediction_text4" class="pred_label1">{{ prediction_text4 }}</p></center>
+                  <center><p id="prediction_text1" class="pred_label1">{{ prediction_text1 }}</p></center>
+
+                  <hr>
+                  <center><h2 style="color: grey"><i><b style="color: white">{{ course_suggestion1 }}</b></i></h2></center>
+                  <center><h2 style="color: grey"><i><b style="color: white">{{ course_suggestion2 }}</b></i></h2></center>
+                  <hr>
+                </div>
+            </div>
+        </div>
+        <hr>
+      </main>
+</body>
+</html>
+
+<style>
+/* global */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,700&display=swap');
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #18A558;
+  color: #c2c8cf;
+}
+
+.main {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.job_label1{
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1em;
+  color: white;
+}
+.job_label2{
+  font-size: 38px;
+  font-weight: 1000;
+  line-height: 1em;
+  color: black;
+}
+/* HEADER */
+a{
+  font-size: large;
+  color: #c2c8cf;
+  text-decoration: none;
+}
+.anchorCon{
+  display: flex;
+  justify-content: center;
+  column-gap: 35px;
+}
+.pred_label1{
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1em;
+  z-index: 1;
+  color: white;
+}
+.itDep{
+  background-color: #18A558;
+  border-radius: 5px;
+  border-color: black;
+  color: white;
+  padding: .5em;
+  text-decoration: none;
+}
+
+.anchorCon .itDep:hover{
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 1.0s;
+  border-color: black;
+  color: black;
+}
+
+.header {
+  background-color: #18A558;
+  margin: 0;
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+.logo {
+  position: relative;
+  right: 18%;
+  font-size: 24px;
+  color: #F9FAF8;
+}
+
+.nav a{
+  text-decoration: none;
+  color: #E5E7EB;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 10px;
+  padding: 5px;
+}
+
+/* HERO SECTION */
+
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://i.ytimg.com/vi/jh7ejR4v2Gw/maxresdefault.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 90px 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right {
+  width: 500px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1em;
+  color: white;
+}
+
+.subtitle {
+  color: #E5E7EB;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 15px 0;
+}
+
+.left{
+  background: rgba(76, 175, 80, 0.5);
+  width: auto;
+  height: auto;
+  max-width:720px;
+  max-height:720px;
+  padding: 50px;
+  margin-left: 25px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.center-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: inline-block;
+}
+</style>
